@@ -1,36 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-nav {
-  background-color: #333;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-icon {
-  font-size: 32px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar li {
-  margin-left: 20px;
-}
-
 .navbar a {
   text-decoration: none;
   color: #fff;
@@ -38,8 +5,4 @@ nav {
 
 .navbar a:hover {
   text-decoration: underline;
-}
-
-h2 {
-  text-align: center;
 }
