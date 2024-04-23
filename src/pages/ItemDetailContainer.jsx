@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { TiShoppingCart } from "react-icons/ti";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Button from 'react-bootstrap/Button';
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
@@ -14,7 +14,7 @@ function ItemDetailContainer() {
     fetch(`https://fakestoreapi.com/products/${id}`)
       .then(res => res.json())
       .then(data => setProduct(data))
-  })
+  });
 
   const { description, image, price, title } = product || {};
   

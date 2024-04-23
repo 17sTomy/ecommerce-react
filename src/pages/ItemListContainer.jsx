@@ -1,6 +1,6 @@
-import Categories from "./Categories";
+import Categories from "../components/Categories";
 import { useParams } from "react-router-dom";
-import ItemCard from "./ItemCard";
+import ItemCard from "../components/ItemCard";
 
 export default function ItemListContainer({ products }) {
   const { id } = useParams();

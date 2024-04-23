@@ -1,10 +1,11 @@
 import { useEffect, useState, useMemo } from 'react';
-import "./App.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ItemListContainer from './components/ItemListContainer'
+import ItemListContainer from './pages/ItemListContainer'
 import NavbarBootstrap from './components/NavbarBootstrap'
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemDetailContainer from './pages/ItemDetailContainer';
+import NotFound from './pages/NotFound';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css"
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -20,7 +21,6 @@ function App() {
       .then(data => setProducts(data))
   };
 
-
   const memoizedProducts = useMemo(() => products, [products]);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ function App() {
           <Route path='/' element={<ItemListContainer products={memoizedProducts} />} />
           <Route path='/category/:id' element={<ItemListContainer products={memoizedProducts} />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </>
