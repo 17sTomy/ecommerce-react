@@ -1,4 +1,3 @@
-import ItemDetailContainer from "./ItemDetailContainer";
 import Categories from "./Categories";
 import { useParams } from "react-router-dom";
 import ItemCard from "./ItemCard";

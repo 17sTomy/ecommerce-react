@@ -9,12 +9,17 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-
+  
   useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = async () => {
     fetch('https://fakestoreapi.com/products/')
       .then(res => res.json())
       .then(data => setProducts(data))
-  }, []);
+  };
+
 
   const memoizedProducts = useMemo(() => products, [products]);
 
@@ -29,7 +34,7 @@ function App() {
         <Routes>
           <Route path='/' element={<ItemListContainer products={memoizedProducts} />} />
           <Route path='/category/:id' element={<ItemListContainer products={memoizedProducts} />} />
-          <Route path='/item/:id' element={<ItemDetailContainer products={memoizedProducts} />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
         </Routes>
       </BrowserRouter>
     </>
