@@ -6,7 +6,7 @@ A simple React.js Ecommerce project for academic purposes using React Bootstrap 
 ![React Ecommerce Preview](src/assets/preview.gif)
 
 ## Installation
-Follow these steps to set up the Spotify Clone on your local machine:
+Follow these steps to set up the app on your local machine:
 
 1. Clone the repository:
    ```
