@@ -1,7 +1,7 @@
 # Ecommerce with React.js
 
 ## Description
-A simple React.js Ecommerce project for academic purposes.
+A simple React.js Ecommerce project for academic purposes using React Bootstrap and Fake Store API.
 
 ![React Ecommerce Preview](src/assets/preview.gif)
 
