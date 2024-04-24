@@ -12,7 +12,6 @@ function NavbarBootstrap() {
         <Navbar.Brand><Link to='/'><img src={logo} alt="logo" style={{ width: "40px" }} /></Link></Navbar.Brand>
         <Nav className="me-auto">
           <Nav.Link><Link to='/'>Home</Link></Nav.Link>
-          <Nav.Link><Link to='/cart'>Cart</Link></Nav.Link>
         </Nav>
         <CartWidget />
       </Container>

@@ -25,13 +25,13 @@ function ItemDetailContainer() {
       </Button>
       {product ? (
         <div className="row justify-content-center align-items-center">
-          <div className="col-md-4">
-            <img src={image} alt={title} className="img-fluid" />
+          <div className="col-md-4 m-2">
+            <img src={image} alt={title} className="img-fluid shadow" style={{ width: "100%", borderRadius: "10px" }} />
           </div>
           <div className="col-md-4">
             <h2>{title}</h2>
             <p>{description}</p>
-            <p className="font-weight-bold"><b>${price}</b></p>
+            <h4 className="font-weight-bold"><b>${price}</b></h4>
             <Button variant="success">Add to Cart <TiShoppingCart /></Button>
           </div>
         </div>

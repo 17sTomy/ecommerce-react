@@ -15,7 +15,7 @@ function Categories() {
 
   return (
     <>
-      <ButtonGroup className='container justify-content-center'>
+      <ButtonGroup className='container justify-content-center mb-2'>
         {radios.map((radio, idx) => (
           <Link to={`/category/${(parseInt(idx) + 1).toString()}`}>
             <ToggleButton

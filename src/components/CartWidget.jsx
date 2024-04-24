@@ -1,5 +1,5 @@
 import { FaCartShopping } from "react-icons/fa6";
-import '../styles/cartWidget.css'
+import '../styles/CartWidget.css'
 
 export default function CartWidget() {
   return (
