@@ -9,9 +9,8 @@ import NotFound from './pages/NotFound';
 import { useProducts } from './hooks/useProducts';
 
 function App() {
-  const { products } = useProducts();
   const [cart, setCart] = useState([]);
-
+  const { products, isLoading } = useProducts();
   const memoizedProducts = useMemo(() => products, [products]);
 
   useEffect(() => {
@@ -23,8 +22,8 @@ function App() {
       <BrowserRouter>
         <NavbarBootstrap />
         <Routes>
-          <Route path='/' element={<ItemListContainer products={memoizedProducts} />} />
-          <Route path='/category/:id' element={<ItemListContainer products={memoizedProducts} />} />
+          <Route path='/' element={<ItemListContainer products={memoizedProducts} isLoading={isLoading} />} />
+          <Route path='/category/:id' element={<ItemListContainer products={memoizedProducts} isLoading={isLoading} />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='*' element={<NotFound />} />
         </Routes>

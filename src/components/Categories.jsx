@@ -16,6 +16,18 @@ function Categories() {
   return (
     <>
       <ButtonGroup className='container justify-content-center mb-2'>
+        <Link to={`/`}>
+          <ToggleButton
+            className='mt-3 m-1'
+            type="radio"
+            style={{
+              backgroundColor:"#8B69C7",
+              border: "none"
+            }}
+          >
+          All
+          </ToggleButton>
+        </Link>
         {radios.map((radio, idx) => (
           <Link to={`/category/${(parseInt(idx) + 1).toString()}`}>
             <ToggleButton
