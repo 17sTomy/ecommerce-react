@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useCategories } from './useCategories';
 
 export const useFilteredProducts = (initialProducts) => {
   const [filteredProducts, setFilteredProducts] = useState(initialProducts);
   const [searchInput, setSearchInput] = useState("");
+  const { categories, isLoading } = useCategories();
 
   const { id } = useParams(); 
-
-  const categories = ["men's clothing", "women's clothing", "electronics", "jewelery"];
   
   useEffect(() => {
     let newFilteredProducts = initialProducts;
 
-    if (id !== undefined) {
-      newFilteredProducts = newFilteredProducts.filter(product => product.category === categories[parseInt(id) - 1]);
+    if (!isLoading && id !== undefined && categories.length > 0) { 
+      const category = categories.find(category => category.value == id);
+      const categoryName = (category.name).toLowerCase();
+      newFilteredProducts = newFilteredProducts.filter(product => product.category === categoryName);
     };
 
     if (searchInput.trim() !== "") {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { getDocs, collection, getFirestore } from "firebase/firestore";
 
 export const useProducts = () => {
   const [products, setProducts] = useState([]);
@@ -6,13 +7,13 @@ export const useProducts = () => {
 
   const fetchProducts = async () => {
     setIsLoading(true);
-    fetch('https://fakestoreapi.com/products/')
-      .then(res => res.json())
-      .then(data => {
-        setProducts(data);
-        setIsLoading(false);
-      })
-  };
+    const db = getFirestore();
+    const productsCollection = collection(db, "products");
+    const querySnapshot = await getDocs(productsCollection);
+    const productsData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    setProducts(productsData);
+    setIsLoading(false);
+  }; 
   
   useEffect(() => {
     fetchProducts();
