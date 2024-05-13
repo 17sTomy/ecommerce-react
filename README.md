@@ -1,12 +1,17 @@
 # Ecommerce with React.js
 
 ## Description
-A simple React.js Ecommerce project for academic purposes using React Bootstrap and Fake Store API.
+A simple React.js Ecommerce project for academic purposes using React Bootstrap and Firebase.
 
 ![React Ecommerce Preview](src/assets/preview.gif)
 
 ## Installation
 Follow these steps to set up the app on your local machine:
+
+## Features
+- Utilizes custom hooks and React Bootstrap for enhanced UI/UX.
+- Integrates Firebase for data storage.
+- Utilizes the useContext hook to manage the shopping cart.
 
 1. Clone the repository:
    ```
