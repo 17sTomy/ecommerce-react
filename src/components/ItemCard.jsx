@@ -1,9 +1,6 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { IoMdAdd } from "react-icons/io";
-import { IoMdRemove } from "react-icons/io";
-import { TiShoppingCart } from "react-icons/ti";
 import { Link } from 'react-router-dom';
+import CartButton from './CartButton';
 
 function ItemCard({ productData }) {
   const { id, image, price, title } = productData;
@@ -18,13 +15,10 @@ function ItemCard({ productData }) {
       <Card.Body>
         <Card.Title style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{title}</Card.Title>
         <Card.Text><b>${price}</b></Card.Text>
-        {/* <Button variant="success"><IoMdAdd /></Button> ESTO SE DEBERIA VER SI ESTA EN EL CARRITO
-        <span>0</span>
-        <Button variant="danger"><IoMdRemove /></Button> */}
-        <Button variant="success">Add to Cart <TiShoppingCart /></Button>
+        <CartButton productData={productData} />
       </Card.Body>
     </Card>
   );
-}
+};
 
 export default ItemCard;

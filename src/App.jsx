@@ -1,15 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemListContainer from './pages/ItemListContainer'
 import NavbarBootstrap from './components/NavbarBootstrap'
 import ItemDetailContainer from './pages/ItemDetailContainer';
 import NotFound from './pages/NotFound';
 import { useProducts } from './hooks/useProducts';
+import { CartProvider } from './context/CartContext';
 
 function App() {
-  const [cart, setCart] = useState([]);
   const { products, isLoading } = useProducts();
   const memoizedProducts = useMemo(() => products, [products]);
 
@@ -18,7 +18,7 @@ function App() {
   }, [products]);
 
   return (
-    <>
+    <CartProvider>
       <BrowserRouter>
         <NavbarBootstrap />
         <Routes>
@@ -28,7 +28,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </CartProvider>
   );
 };
 

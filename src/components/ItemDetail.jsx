@@ -1,5 +1,4 @@
-import Button from 'react-bootstrap/Button';
-import { TiShoppingCart } from "react-icons/ti";
+import CartButton from './CartButton';
 
 export default function ItemDetail({ productData }) {
   const { description, image, price, title } = productData;
@@ -13,7 +12,7 @@ export default function ItemDetail({ productData }) {
         <h2>{title}</h2>
         <p>{description}</p>
         <h4 className="font-weight-bold"><b>${price}</b></h4>
-        <Button variant="success">Add to Cart <TiShoppingCart /></Button>
+        <CartButton productData={productData} />
       </div>
     </div>
   );
