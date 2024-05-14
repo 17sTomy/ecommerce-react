@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import { TiShoppingCart } from "react-icons/ti";
 import "../styles/Checkout.css";
 import Swal from 'sweetalert2'
- 
+  
 function CheckoutForm() {
   const [validated, setValidated] = useState(false);
 
