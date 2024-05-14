@@ -4,7 +4,7 @@ import { IoMdAdd } from "react-icons/io";
 import { IoMdRemove } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
 import CartContext from '../context/CartContext';
-
+ 
 export default function CartButton({ productData }) {
   const { addToCart, removeOneFromCart, cart } = useContext(CartContext);
 

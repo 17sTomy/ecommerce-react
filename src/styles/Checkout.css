@@ -1,0 +1,32 @@
+.custom-input:focus {
+  border: none;
+  box-shadow: 0 0 0 0.20rem rgba(139, 105, 199, .7) !important; 
+}
+
+.custom-button {
+  background-color: rgb(139, 105, 199);
+  border-color: transparent;
+}
+
+.custom-button:hover {
+  background-color: rgba(139, 105, 199, .9);
+  border-color: rgba(139, 105, 199, .9);
+}
+
+.custom-button:active {
+  background-color: rgba(139, 105, 199, .9) !important;
+  border-color: rgba(139, 105, 199, .9) !important;
+}
+
+.custom-check {
+  color: rgba(139, 105, 199, .7);
+}
+
+.custom-check:focus {
+  box-shadow: 0 0 0 0.20rem rgba(139, 105, 199, .7) !important;
+}
+
+.custom-check .form-check-input:checked {
+  background-color: rgba(139, 105, 199, .7);
+  border-color: rgba(139, 105, 199, .7);
+}

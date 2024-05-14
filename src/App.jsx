@@ -8,6 +8,7 @@ import ItemDetailContainer from './pages/ItemDetailContainer';
 import NotFound from './pages/NotFound';
 import { useProducts } from './hooks/useProducts';
 import { CartProvider } from './context/CartContext';
+import Checkout from './pages/Checkout';
 
 function App() {
   const { products, isLoading } = useProducts();
@@ -25,6 +26,7 @@ function App() {
           <Route path='/' element={<ItemListContainer products={memoizedProducts} isLoading={isLoading} />} />
           <Route path='/category/:id' element={<ItemListContainer products={memoizedProducts} isLoading={isLoading} />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
+          <Route path='/checkout' element={<Checkout />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
