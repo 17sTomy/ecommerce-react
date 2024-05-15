@@ -50,8 +50,6 @@ const CartProvider = ({ children }) => {
 
   const clearCart = () => setCart([]);
 
-  const buyProducts = () => {};
-
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
   };
@@ -65,7 +63,6 @@ const CartProvider = ({ children }) => {
     removeOneFromCart,
     removeAllFromCart,
     clearCart,
-    buyProducts,
     calculateTotal,
   };
 
