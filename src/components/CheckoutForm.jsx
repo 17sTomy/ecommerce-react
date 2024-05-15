@@ -40,7 +40,7 @@ function CheckoutForm() {
       cart
     };
     
-    makeOrder(orderData);
+    // makeOrder(orderData); Commented out to avoid writing to the database!
     clearCart();
     navigate("/");
 
