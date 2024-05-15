@@ -5,7 +5,7 @@ import "../styles/Search.css"
 
 export default function Search({ setSearchInput }) {
   return (
-    <div className='container mt-4' style={{ width: "50%" }}>
+    <div className='container mt-4 wrapper' style={{ width: "50%" }}>
       <InputGroup className="mb-2">
         <InputGroup.Text id="basic-addon1"><IoSearch /></InputGroup.Text>
         <Form.Control

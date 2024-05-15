@@ -14,7 +14,7 @@ export default function CheckoutProducts() {
         <div key={item.id} className="checkout-product">
           <div className="d-flex align-items-center">
             <div style={{ marginRight: '10px' }}>
-              <Card.Img variant="top" src={item.image} style={{ objectFit: 'contain', width: '100px', height: '100px' }} />
+              <Card.Img className="shadow" variant="top" src={item.image} style={{ width: '70px', borderRadius: "10px", objectFit: "contain" }} />
             </div>
             <div>
               <p><b>{item.title}</b></p>

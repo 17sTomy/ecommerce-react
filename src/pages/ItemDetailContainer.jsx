@@ -10,7 +10,7 @@ function ItemDetailContainer() {
   const navigate = useNavigate();
   
   return (
-    <div className="container mt-5">
+    <div className="container mt-3 mb-4">
       <Button variant="dark" onClick={() => navigate(-1)}>
         <IoMdArrowRoundBack />
       </Button>
