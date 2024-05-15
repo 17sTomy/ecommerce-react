@@ -3,7 +3,7 @@
 ## Description
 A simple React.js Ecommerce project for academic purposes using React Bootstrap and Firebase.
 
-### You can see the project [here](https://ecommerce-react-swart-five.vercel.app/).
+### You can see the project [here](https://ecommerce-react-swart-five.vercel.app/){:target="_blank"}.
 
 ![React Ecommerce Preview](src/assets/preview.gif)
 
